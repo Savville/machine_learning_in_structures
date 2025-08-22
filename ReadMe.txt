@@ -1,4 +1,4 @@
-# Bridge Moving Load Simulation (`bridge_car2.tcl`)
+# Bridge Moving Load Simulation (`bridge_car2`)
 
 ## Overview
 
