@@ -1,0 +1,10 @@
+SampleNo.,Grading.%PassingBSSieveSize(mm).20,Grading.%PassingBSSieveSize(mm).10,Grading.%PassingBSSieveSize(mm).5,Grading.%PassingBSSieveSize(mm).2,Grading.%PassingBSSieveSize(mm).0.425,Grading.%PassingBSSieveSize(mm).0.075,AtterbergLimits.LL.%,AtterbergLimits.PL.%,AtterbergLimits.PI.%,AtterbergLimits.LS.%,CompactionT180.MDD.Kgm3,CompactionT180.OMC.(%),CBR.4daysSoak.(%),Swell.(%),SoilComposition.Gravel.(%),SoilComposition.Sand.(%),SoilComposition.SiltClay.(%),CBR_Bin
+10,100,77,57,44,29,24,37,26,11,6,1715,10.5,8,0.1,56,20,24,Low
+20,100,88,65,50,39,31,50,30,20,10,1685,16.4,29,0.2,50,19,31,Medium
+30,100,75,50,38,27,19,35,20,15,8,1601,14.8,35,0.1,62,19,19,High
+40,100,100,99,90,75,65,75,50,25,13,1120,27.3,1,2.6,10,25,65,Low
+50,100,91,79,71,57,47,50,31,19,9,1347,14.9,7,0.2,29,24,47,Low
+60,100,76,46,33,15,6,47,27,20,10,1644,21.0,30,0.2,67,27,6,Medium
+70,100,90,59,34,23,18,48,27,21,11,1607,17.5,15,0.2,66,16,18,Medium
+80,100,100,99,98,70,51,44,25,19,9,1716,18.3,12,0.2,2,47,51,Medium
+89,100,100,99,95,57,27,21,17,4,2,1797,10.2,20,0.1,5,68,27,Medium

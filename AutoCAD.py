@@ -236,7 +236,7 @@ class GuardHouseCAD:
             self.model.AddLine(start_point, end_point)
     
     def draw_roof(self):
-        """Draw the pyramid roof"""
+        """Draw the pyramid roof with triangular faces from each side"""
         print("Drawing roof...")
         self.set_active_layer("ROOF")
         
@@ -247,8 +247,8 @@ class GuardHouseCAD:
         corners = [
             APoint(0, 0, 2.7),      # Front left
             APoint(3.01, 0, 2.7),   # Front right
-            APoint(0, 2.1, 2.7),    # Back left
-            APoint(3.01, 2.1, 2.7)  # Back right
+            APoint(3.01, 2.1, 2.7), # Back right
+            APoint(0, 2.1, 2.7)     # Back left
         ]
         
         # Draw lines from each corner to roof peak
@@ -257,14 +257,26 @@ class GuardHouseCAD:
         
         # Draw roof base edges (wall tops)
         roof_base_lines = [
-            [APoint(0, 0, 2.7), APoint(3.01, 0, 2.7)],      # Front edge
-            [APoint(0, 2.1, 2.7), APoint(3.01, 2.1, 2.7)],  # Back edge
-            [APoint(0, 0, 2.7), APoint(0, 2.1, 2.7)],       # Left edge
-            [APoint(3.01, 0, 2.7), APoint(3.01, 2.1, 2.7)]  # Right edge
+            [corners[0], corners[1]], # Front edge
+            [corners[1], corners[2]], # Right edge
+            [corners[2], corners[3]], # Back edge
+            [corners[3], corners[0]]  # Left edge
         ]
-        
         for start_point, end_point in roof_base_lines:
             self.model.AddLine(start_point, end_point)
+        
+        # Draw triangular faces for each roof side
+        try:
+            # Front face
+            self.model.Add3DFace(corners[0], corners[1], roof_peak, roof_peak)
+            # Right face
+            self.model.Add3DFace(corners[1], corners[2], roof_peak, roof_peak)
+            # Back face
+            self.model.Add3DFace(corners[2], corners[3], roof_peak, roof_peak)
+            # Left face
+            self.model.Add3DFace(corners[3], corners[0], roof_peak, roof_peak)
+        except Exception as e:
+            print(f"Note: 3D roof faces not created - {e}")
     
     def send_raw_commands(self):
         """Alternative method: Send raw AutoCAD commands"""
