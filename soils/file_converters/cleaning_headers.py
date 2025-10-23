@@ -41,7 +41,7 @@ for col in df.columns:
 df.columns = clean_columns
 
 # Save the cleaned dataframe
-df.to_csv('cleaned_MTRD_Soils_data.csv', index=False)
+df.to_csv('cleaned_MTRD_Soils_data500.csv', index=False)
 
 # Print the new column names
 print(df.columns.tolist())

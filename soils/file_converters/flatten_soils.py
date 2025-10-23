@@ -16,7 +16,7 @@ print(f"\nExcel files found: {excel_files}")
 
 # Try to find the target file or a similar one
 target_file = None
-exact_match = "MTRD_SOILS_TEST.xlsx"
+exact_match = "MTRD SOILS STANDARD TESTS DATA 500 pts1.xlsx"
 
 if exact_match in excel_files:
     target_file = exact_match
